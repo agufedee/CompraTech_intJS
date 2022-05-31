@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #EEE;
+  font-family: 'Lato', sans-serif;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body ul li {
+  list-style: none;
+}
+
+#root {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header {
+  background-color: #a04741;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.header span {
+  color: #ffd29e;
+}
+
+.header__logo {
+  color: #EEE;
+  font-size: 2.5rem;
+}
+
+.header__nav {
+  width: 50%;
+  padding: 10px;
+}
+
+.header__nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__nav__list-item a {
+  padding: 2px 5px;
+  border-radius: 3px;
+  color: #EEE;
+  font-size: 1.1rem;
+}
+
+.header__nav__list-item a:hover {
+  background-color: #ffd29ec5;
+  color: #1f1210;
+  -webkit-transition: .4s;
+  transition: .4s;
+  text-decoration: underline;
+}
+
+.header__nav__list-item a:hover span {
+  color: #1f1210;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 109px);
+  background-size: cover;
+  background-position: center;
+  background-image: url(../assets/heroSection/hero_auris.jpg);
+  -webkit-animation: hero 12s infinite ease;
+          animation: hero 12s infinite ease;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+.hero__content {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 22, 40, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero__content p {
+  color: #EEE;
+  font-size: 3rem;
+  text-shadow: 3px 3px 15px #a04741;
+  text-align: center;
+  width: 80%;
+}
+
+@-webkit-keyframes hero {
+  0% {
+    background-image: url(../assets/heroSection/hero_auris.jpg);
+  }
+  32% {
+    background-image: url(../assets/heroSection/hero_auris.jpg);
+  }
+  33% {
+    background-image: url(../assets/heroSection/hero_reloj.jpg);
+  }
+  65% {
+    background-image: url(../assets/heroSection/hero_reloj.jpg);
+  }
+  66% {
+    background-image: url(../assets/heroSection/hero_celular.jpg);
+  }
+  100% {
+    background-image: url(../assets/heroSection/hero_celular.jpg);
+  }
+}
+
+@keyframes hero {
+  0% {
+    background-image: url(../assets/heroSection/hero_auris.jpg);
+  }
+  32% {
+    background-image: url(../assets/heroSection/hero_auris.jpg);
+  }
+  33% {
+    background-image: url(../assets/heroSection/hero_reloj.jpg);
+  }
+  65% {
+    background-image: url(../assets/heroSection/hero_reloj.jpg);
+  }
+  66% {
+    background-image: url(../assets/heroSection/hero_celular.jpg);
+  }
+  100% {
+    background-image: url(../assets/heroSection/hero_celular.jpg);
+  }
+}
+
+.menu {
+  position: fixed;
+  z-index: 5;
+  bottom: 40px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  background-color: #a04741;
+  border-radius: 7px;
+  padding: 10px 0;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.menu div {
+  width: 70%;
+  height: 5px;
+  border-radius: 5px;
+  background: #eee;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.active .menu__sp1 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+}
+
+.active .menu__sp2 {
+  -webkit-transform: translateX(-130%);
+          transform: translateX(-130%);
+  opacity: 0;
+}
+
+.active .menu__sp3 {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  position: absolute;
+}
+
+.banner {
+  margin: 0 5%;
+}
+
+.banner__auricular, .banner__reloj, .banner__celular {
+  height: 200px;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  padding: 0 100px;
+}
+
+.banner__auricular h3, .banner__reloj h3, .banner__celular h3 {
+  color: #EEE;
+  font-size: 1.7rem;
+  text-shadow: 3px 3px 5px #000;
+}
+
+.banner__auricular button, .banner__reloj button, .banner__celular button {
+  padding: 2% 5%;
+  border: none;
+  border-radius: 3px;
+  background-color: #ffd29e;
+  cursor: pointer;
+}
+
+.banner__auricular button:hover, .banner__reloj button:hover, .banner__celular button:hover {
+  text-decoration: underline;
+}
+
+.banner__auricular {
+  background-image: url(../assets/heroSection/hero_auris.jpg);
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.banner__reloj {
+  background-image: url(../assets/heroSection/hero_reloj.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.banner__celular {
+  background-image: url(../assets/heroSection/hero_celular.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.footer {
+  margin: 30px auto;
+  text-align: center;
+}
+
+.footer p a {
+  color: #a04741;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 412px) {
+  .header__nav {
+    width: 100%;
+    position: absolute;
+    top: 68px;
+    right: 0;
+    bottom: 20%;
+    left: 0;
+    z-index: 3;
+    background-color: #a04741;
+    display: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header__nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 80%;
+  }
+  .header__nav ul li {
+    margin: 20px 0;
+  }
+  .hero {
+    height: calc(80vh - 68px);
+  }
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .banner__auricular, .banner__reloj, .banner__celular {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 15%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
