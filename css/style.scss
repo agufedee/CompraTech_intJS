@@ -9,7 +9,6 @@
 body {
     background: #EEE;
     font-family: 'Lato', sans-serif;
-    // overflow: hidden;
 
     a {
         text-decoration: none;
@@ -129,7 +128,7 @@ body {
 
 .menu {
     position: fixed;
-    z-index: 5;
+    z-index: 99;
     bottom:40px;
     right: 25px;
     width: 50px;
@@ -169,6 +168,41 @@ body {
     }
 }
 
+.destacado {
+    margin: 6% 5%;
+    text-align: center;
+    color: #1f1210;
+
+    &__text {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    &__container{
+        display: flex;
+        justify-content: space-evenly;
+
+        h3{
+            text-align: center;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 10px;
+
+                img{
+                    width: 200px;
+                    margin: auto;
+                }
+    
+                h3 {
+                    text-align: center;
+                }
+        }
+    }
+}
+
 
 .banner {
     margin: 0 5%;
@@ -179,7 +213,7 @@ body {
         justify-content: space-between;
         align-items: center;
         transition: all .3s ease-out;
-        padding: 0 100px;
+        padding: 0 15%;
 
         h3{
             color: #EEE;
@@ -188,11 +222,13 @@ body {
         }
 
         button {
-            padding: 2% 5%;
+            font-size: 1.1rem;
+            padding: 1.9% 4.8%;
             border: none;
             border-radius: 3px;
             background-color: #ffd29e;
             cursor: pointer;
+            box-shadow: inset -3px -3px 5px #b89772;
 
             &:hover {
                 text-decoration: underline;
@@ -229,6 +265,7 @@ body {
             color: #a04741;
             text-decoration: none;
             font-size: 1.1rem;
+            font-weight: bold;
         }
     }
 }
@@ -269,6 +306,17 @@ body {
     .menu {
         display: flex;
     }
+
+    .destacado {
+        &__container {
+            display: block;
+            
+            div {
+                margin-top: 20px;
+            }
+        }
+    }
+
     .banner{
         &__auricular, &__reloj, &__celular{
             flex-direction: column;

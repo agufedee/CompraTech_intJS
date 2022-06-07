@@ -5,7 +5,7 @@ const NavBar = () => {
         <ul class="header__nav__list">
             <li class="header__nav__list-item"><a href="#/">Home</a></li>
             <span>|</span>
-            <li class="header__nav__list-item"><a href="#">Productos</a></li>
+            <li class="header__nav__list-item"><a href="./assets/productos.html">Productos</a></li>
             <span>|</span>
             <li class="header__nav__list-item"><a href="./assets/Sesion/user__sesion.html">Log<span>in</span></a></li>
         </ul>

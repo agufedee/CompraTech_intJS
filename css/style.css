@@ -176,7 +176,7 @@ body ul li {
 
 .menu {
   position: fixed;
-  z-index: 5;
+  z-index: 99;
   bottom: 40px;
   right: 25px;
   width: 50px;
@@ -224,6 +224,53 @@ body ul li {
   position: absolute;
 }
 
+.destacado {
+  margin: 6% 5%;
+  text-align: center;
+  color: #1f1210;
+}
+
+.destacado__text {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.destacado__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.destacado__container h3 {
+  text-align: center;
+}
+
+.destacado__container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px;
+}
+
+.destacado__container div img {
+  width: 200px;
+  margin: auto;
+}
+
+.destacado__container div h3 {
+  text-align: center;
+}
+
 .banner {
   margin: 0 5%;
 }
@@ -242,7 +289,7 @@ body ul li {
           align-items: center;
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;
-  padding: 0 100px;
+  padding: 0 15%;
 }
 
 .banner__auricular h3, .banner__reloj h3, .banner__celular h3 {
@@ -252,11 +299,14 @@ body ul li {
 }
 
 .banner__auricular button, .banner__reloj button, .banner__celular button {
-  padding: 2% 5%;
+  font-size: 1.1rem;
+  padding: 1.9% 4.8%;
   border: none;
   border-radius: 3px;
   background-color: #ffd29e;
   cursor: pointer;
+  -webkit-box-shadow: inset -3px -3px 5px #b89772;
+          box-shadow: inset -3px -3px 5px #b89772;
 }
 
 .banner__auricular button:hover, .banner__reloj button:hover, .banner__celular button:hover {
@@ -295,6 +345,7 @@ body ul li {
   color: #a04741;
   text-decoration: none;
   font-size: 1.1rem;
+  font-weight: bold;
 }
 
 @media (max-width: 412px) {
@@ -341,6 +392,12 @@ body ul li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .destacado__container {
+    display: block;
+  }
+  .destacado__container div {
+    margin-top: 20px;
   }
   .banner__auricular, .banner__reloj, .banner__celular {
     -webkit-box-orient: vertical;

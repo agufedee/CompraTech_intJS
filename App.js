@@ -1,5 +1,5 @@
 import BannerProducts from "./scripts/components/BannerProducts.js"
-import BurgerMenu from "./scripts/components/BurguerMenu.js"
+import Destacados from "./scripts/components/Destacados.js"
 import Footer from "./scripts/components/Footer.js"
 import Header from "./scripts/components/Header.js"
 import HeroSection from "./scripts/components/HeroSection.js"
@@ -10,8 +10,11 @@ export const App = () => {
 
     root.appendChild(HeroSection())
 
+    root.appendChild(Destacados())
+
     root.appendChild(BannerProducts())
 
     root.appendChild(Footer())
 
 }
+
