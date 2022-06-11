@@ -6,6 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../css/productos.css" />
         <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
+        <!-- CSS only -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+            crossorigin="anonymous"
+        />
         <title>CompraTech-Productos</title>
     </head>
     <body>
@@ -41,7 +48,8 @@
 
         <main class="main">
             <aside class="main__filtro">
-                <h4>Categorias</h4>
+                <!-- filtro con checkbox -->
+                <h3>Filtrar</h3>
                 <form class="main__filtro--form">
                     <label for="auricular">
                         Auriculares
@@ -55,6 +63,23 @@
                         >Celulares <input type="checkbox" name="" id="celular"
                     /></label>
                 </form>
+                <section class="cartList" id="cartList">
+                    <div class="principalWrapper">
+                        <h3>Carrito</h3>
+                        <div class="cart-wrapper" id="cartWrapper">
+                            <div class="emptyProductsMessage">
+                                No tenés productos seleccionados!
+                            </div>
+                        </div>
+                        <div class="total-items">
+                            <span>
+                                <strong>Total:</strong>
+                                <span id="totalProducts"></span>
+                                $
+                            </span>
+                        </div>
+                    </div>
+                </section>
             </aside>
 
             <section class="main__cards">
@@ -68,9 +93,15 @@
                                 src="https://http2.mlstatic.com/D_NQ_NP_802516-MLA48533694456_122021-O.webp"
                                 alt=""
                             />
-                            <p>In-ear Sony WF-C500s</p>
-                            <p>$ 9000</p>
-                            <button class="addToCart">Agregar al Carrito</button>
+                            <p>In-ear Sony WF-C500</p>
+                            <p>$9.000</p>
+                            <button
+                                onclick="addProduct('In-ear Sony WF-C500', 9000, 1)"
+                                class="addToCart"
+                                data-id="1"
+                            >
+                                Agregar al Carrito
+                            </button>
                         </div>
                         <div
                             class="main__cards__products1__container--auricular"
@@ -80,8 +111,10 @@
                                 alt=""
                             />
                             <p>Soundpeats TrueFree 2</p>
-                            <p>$ 4000</p>
-                            <button class="addToCart">Agregar al Carrito</button>
+                            <p>$4.000</p>
+                            <button class="addToCart" data-id="2" onclick="addProduct('Soundpeats TrueFree 2', 4000, 1)">
+                                Agregar al Carrito
+                            </button>
                         </div>
                         <div
                             class="main__cards__products1__container--auricular"
@@ -91,8 +124,10 @@
                                 alt=""
                             />
                             <p>Sony WH-1000XM4</p>
-                            <p>$ 20000</p>
-                            <button class="addToCart">Agregar al Carrito</button>
+                            <p>$20.000</p>
+                            <button class="addToCart" onclick="addProduct('Sony WH-1000XM4', 20000, 1)">
+                                Agregar al Carrito
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -105,7 +140,10 @@
                                 alt=""
                             />
                             <p>Galaxy Watch4 1.4</p>
-                            <button class="addToCart">Agregar al Carrito</button>
+                            <p>$12.000</p>
+                            <button class="addToCart"  onclick="addProduct('Galaxy Watch4 1.4',12000, 1)">
+                                Agregar al Carrito
+                            </button>
                         </div>
                         <div class="main__cards__products2__container--reloj">
                             <img
@@ -113,7 +151,10 @@
                                 alt=""
                             />
                             <p>Mi Watch Lite 1.4"</p>
-                            <button class="addToCart">Agregar al Carrito</button>
+                            <p>$9.500</p>
+                            <button class="addToCart" onclick="addProduct('Mi Watch Lite 1.4', 9500, 1)">
+                                Agregar al Carrito
+                            </button>
                         </div>
                         <div class="main__cards__products2__container--reloj">
                             <img
@@ -121,7 +162,10 @@
                                 alt=""
                             />
                             <p>Microwear W26 1.75"</p>
-                            <button class="addToCart">Agregar al Carrito</button>
+                            <p>$4.500</p>
+                            <button class="addToCart" onclick="addProduct('Microwear W26 1.75', 4500, 1)">
+                                Agregar al Carrito
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -134,7 +178,10 @@
                                 alt=""
                             />
                             <p>Motorola Edge 20 Pro</p>
-                            <button class="addToCart">Agregar al Carrito</button>
+                            <p>$120.000</p>
+                            <button class="addToCart" onclick="addProduct('Motorola Edge 20 Pro', 120000, 1)">
+                                Agregar al Carrito
+                            </button>
                         </div>
                         <div class="main__cards__products3__container--celular">
                             <img
@@ -142,15 +189,21 @@
                                 alt=""
                             />
                             <p>Redmi Note 10 Pro</p>
-                            <button class="addToCart">Agregar al Carrito</button>
+                            <p>$65.000</p>
+                            <button class="addToCart" onclick="addProduct('Redmi Note 10 Pro', 65000,1)">
+                                Agregar al Carrito
+                            </button>
                         </div>
                         <div class="main__cards__products3__container--celular">
                             <img
                                 src="https://http2.mlstatic.com/D_NQ_NP_702215-MLA48764860532_012022-O.webp"
                                 alt=""
                             />
-                            <p>TCL 20 SE 256 GB</p>
-                            <button class="addToCart">Agregar al Carrito</button>
+                            <p>TCL 20 SE 256GB</p>
+                            <p>$45.000</p>
+                            <button class="addToCart" onclick="addProduct('TCL 20 SE', 45000, 1)">
+                                Agregar al Carrito
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -166,7 +219,12 @@
 
         <script src="../scripts/components/Productos/menu.js"></script>
         <script src="../scripts/components/Productos/filtro.js"></script>
-
-        
+        <script src="../scripts/components/Productos/carrito.js"></script>
+        <!-- JavaScript Bundle with Popper -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"
+        ></script>
     </body>
 </html>
